@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+  >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/picture"
+    android:alpha="0.8"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="34sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="24dp"
+                android:padding="4dp"
+                android:text="@string/team_a" />
+
+            <TextView
+                android:id="@+id/team_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:gravity="center"
+                android:textSize="56sp"
+                android:textColor="@color/white"
+                android:padding="4dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/try_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_below="@+id/team_b_score"
+                android:layout_marginTop="50dp"
+                android:onClick="addFiveForTeamA"
+                android:text="try" />
+
+            <Button
+                android:id="@+id/conversion_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="addTwoForTeamA"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="38dp"
+                android:layout_below="@+id/try_a_score"
+                android:layout_marginTop="10dp"
+                android:text="@string/conversion" />
+
+            <Button
+                android:id="@+id/penalty_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="38dp"
+                android:layout_below="@+id/conversion_a_score"
+                android:layout_marginTop="10dp"
+                android:onClick="addThreeForTeamA"
+                android:text="@string/penalty_kick" />
+            <Button
+                android:id="@+id/drop_a_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_below="@+id/penalty_a_score"
+                android:layout_marginTop="10dp"
+                android:onClick="addThreeForTeamA"
+                android:text="@string/drop_goal" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="4dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="190dp"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="34sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:padding="4dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/team_b" />
+
+            <TextView
+                android:id="@+id/team_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp"
+                android:textSize="56sp"
+                android:textColor="@color/white"
+                android:padding="4dp"
+                android:text="0" />
+
+            <Button
+                android:id="@+id/try_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/team_b_score"
+                android:layout_marginTop="50dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addFiveForTeamB"
+                android:text="try" />
+
+            <Button
+                android:id="@+id/conversion_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/try_b_score"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginRight="10dp"
+                android:onClick="addTwoForTeamB"
+                android:text="@string/conversion" />
+
+            <Button
+                android:id="@+id/penalty_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/conversion_b_score"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="38dp"
+                android:layout_marginRight="10dp"
+                android:onClick="addThreeForTeamB"
+                android:text="@string/penalty_kick" />
+            <Button
+                android:id="@+id/drop_b_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:layout_below="@+id/penalty_b_score"
+                android:layout_marginTop="10dp"
+                android:onClick="addThreeForTeamB"
+                android:text="@string/drop_goal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="reset"
+        android:textSize="20sp"
+        android:onClick="resetScore"/>
+
+</RelativeLayout>
+</ScrollView>

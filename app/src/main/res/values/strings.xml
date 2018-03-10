@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">P2ScoreKeeperApp</string>
+    <string name="team_a">Team A</string>
+    <string name="team_b">Team B</string>
+    <string name="drop_goal">Drop Goal</string>
+    <string name="penalty_kick">Penalty kick</string>
+    <string name="conversion">Conversion</string>
+
+</resources>
